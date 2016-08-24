@@ -10,7 +10,7 @@ object OutputWriter {
 
 
   def writeFile(filePath: String,textRDD: RDD[(String,Int)]): Unit ={
-    textRDD.saveAsTextFile(filePath)
+    textRDD.coalesce(1).saveAsTextFile(filePath)
   }
 
 }

@@ -10,9 +10,9 @@ scalaVersion := "2.10.5"
 ivyScala := ivyScala.value map {_.copy(overrideScalaVersion = true)}
 
 
-/*resolvers += "Typesafe Repository" at "https://repo.typesafe.com/typesafe/releases"
+resolvers += "Typesafe Repository" at "https://repo.typesafe.com/typesafe/releases"
 
-resolvers += "Sonatype OSS Maven Repository" at "https://oss.sonatype.org/content/repositories/public"*/
+resolvers += "Sonatype OSS Maven Repository" at "https://oss.sonatype.org/content/repositories/public"
 
 resolvers += "Maven Central" at "http://central.maven.org/maven2/"
 
@@ -26,4 +26,4 @@ libraryDependencies ++= Seq(
 )
 
 
-publishTo := Some(Resolver.file("file",new File(Path.userHome.absolutePath +"/.ivy2/cache/")))
+publishTo := Some(Resolver.file("file",new File(Path.userHome.absolutePath +"/.ivy2/cache")))
